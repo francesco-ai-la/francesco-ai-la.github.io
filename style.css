@@ -1,21 +1,35 @@
+:root {
+  --sinatra-blue: #4A90E2;
+}
+
 body {
-  font-family: 'Helvetica Neue', sans-serif;
-  background: #f9f9f9;
-  color: #111;
-  max-width: 600px;
-  margin: auto;
-  padding: 2rem;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  margin: 40px;
   line-height: 1.6;
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+a {
+  color: var(--sinatra-blue);
+  text-decoration: none;
 }
 
-.links a {
+a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+}
+
+nav a, .contact a {
   display: inline-block;
-  margin-right: 1rem;
-  text-decoration: none;
-  color: #0077ff;
+  margin-bottom: 0.4rem;
 }
