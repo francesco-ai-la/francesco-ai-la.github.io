@@ -46,3 +46,18 @@ h2 {
   margin-bottom: 0.8rem;
   font-weight: normal;
 }
+
+.video-figure {
+  margin: 2rem 0;
+}
+
+.video-figure figcaption {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin-top: 0.4rem;
+}
+
+.intro {
+  max-width: 520px;
+  margin-bottom: 1.4rem;
+}
