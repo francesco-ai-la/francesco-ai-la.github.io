@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cinematic Scene Creation with AI — Francesco Loiola</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Cinematic Scene Creation with AI</h1>
+
+    <p>
+      April 2025. My friend Giorgio Caporali
+      (<a href="https://www.imdb.com/name/nm16241043/" target="_blank" rel="noopener noreferrer">IMDb</a>)
+      is a film director based in Rome. He approached me to experiment with a few scenes for his new movie,
+      whose protagonist is a male dancer. We explored the idea of using AI to visualize his recurring dream
+      sequences as animated fragments.
+    </p>
+
+    <p>
+      Throughout this project, I learned how AI could support an artist’s creative process by expanding what’s
+      possible under real-world constraints - we made it feasible to explore ideas that would otherwise be
+      restrained by budget limitations, while also leaving room to play, iterate, and push the creative
+      boundaries further.
+    </p>
+
+    <p>
+      I had fun bridging novel AI capabilities with an artist’s very specific creative demands. I would be
+      excited to revisit AI video capabilities in filmmaking in the future.
+    </p>
+
+    <h2>Technical Setup</h2>
+
+    <p>
+      I evaluated several text-to-video models (OpenAI Sora, Runway Gen-2, and the Chinese WAN 2.1, among others)
+      but they lacked the level of control and transparency I needed. Control is essential to respect an artist’s
+      creative process, and beyond that, these models also lacked excitement and precision. You could just tell
+      that it was AI.
+    </p>
+
+    <p>
+      After a few weeks of experimentation, I was genuinely pleased with the final result. I ended up building
+      a custom ComfyUI workflow on ThinkDiffusion, since my laptop wasn’t powerful enough to run everything
+      locally. The technique that proved most effective for my use case was AnimateDiff, with the entire pipeline
+      built on top of Stable Diffusion. In order to maintain consistency in the characters, I opted for an
+      image-to-video workflow (with the images kindly provided by OpenAI GPT-4o which was all over social media
+      with its image generation capability throughout those weeks).
+    </p>
+
+    <p>
+      The workflow was based on this step-by-step guide:
+      <a href="https://learn.thinkdiffusion.com/transform-videos-with-ai-dancing-noodles-step-by-step-tutorial/" target="_blank" rel="noopener noreferrer">
+        Transform Videos with AI: Dancing Noodles (ThinkDiffusion)
+      </a>
+    </p>
+
+<video controls playsinline style="width:100%; margin: 2rem 0;">
+  <source src="assets/cinematic-scene.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+    <nav>
+      <a href="work.html">← Work</a><br />
+      <a href="index.html">← Home</a>
+    </nav>
+  </main>
+</body>
+</html>
