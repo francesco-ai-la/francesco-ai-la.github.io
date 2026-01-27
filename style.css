@@ -5,7 +5,7 @@
 body {
   background-color: #ffffff;
   color: #000000;
-  font-family: 'EB Garamond', serif;
+  font-family: 'Crimson Pro', serif;
   font-size: 18px;
   margin: 40px;
   line-height: 1.6;
@@ -60,4 +60,10 @@ h2 {
 .intro {
   max-width: 520px;
   margin-bottom: 1.4rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  margin: 3rem 0;
 }
