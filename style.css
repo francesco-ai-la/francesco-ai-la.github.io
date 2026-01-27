@@ -2,14 +2,53 @@
   --sinatra-blue: #4A90E2;
 }
 
+/* Base */
+
 body {
   background-color: #ffffff;
   color: #000000;
   font-family: 'Crimson Pro', serif;
   font-size: 18px;
-  margin: 40px;
   line-height: 1.6;
+  margin: 40px;
 }
+
+main {
+  max-width: 600px;
+}
+
+/* Text */
+
+p {
+  margin-top: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+p.intro {
+  max-width: 520px;
+  margin-bottom: 2rem;
+}
+
+p.list {
+  margin-top: 0.2rem;
+  margin-bottom: 1.4rem;
+}
+
+/* Headings */
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin-top: 2rem;
+  margin-bottom: 0.4rem;
+}
+
+/* Links */
 
 a {
   color: var(--sinatra-blue);
@@ -20,16 +59,10 @@ a:hover {
   text-decoration: underline;
 }
 
-main {
-  max-width: 600px;
-}
+/* Navigation / footer */
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.2rem;
-}
-
-nav a, .contact a {
+nav a,
+.contact a {
   display: inline-block;
   margin-bottom: 0.4rem;
 }
@@ -40,12 +73,7 @@ footer {
   opacity: 0.8;
 }
 
-h2 {
-  font-size: 1.6rem;
-  margin-top: 2.5rem;
-  margin-bottom: 0.8rem;
-  font-weight: normal;
-}
+/* Media */
 
 .video-figure {
   margin: 2rem 0;
@@ -57,10 +85,7 @@ h2 {
   margin-top: 0.4rem;
 }
 
-.intro {
-  max-width: 520px;
-  margin-bottom: 1.4rem;
-}
+/* Dividers */
 
 hr {
   border: none;
