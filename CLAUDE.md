@@ -85,5 +85,13 @@ rhythm, or LLM filler ("delve", "it's not just X, it's Y").
   mobile width too — several pages are missing the viewport meta.
 - Check every internal link still resolves after renaming or adding a page.
 - Commit in small, single-purpose changes with plain-language messages.
-- **Always ask before `git push`.** Pushing publishes to the live site.
+- **Pushing to `main` is pre-authorized** (Francesco, 2026-08-31). Push changes
+  he has asked for without stopping to confirm, and say what went live. This
+  covers ordinary content and style edits only — it is not blanket approval for
+  the exceptions below.
+- Still ask first for: deleting or renaming existing pages, rewriting prose he
+  did not ask to have changed, force-pushing or rewriting history, and anything
+  touching `assets/resume.pdf`.
 - Never touch the custom-domain setup (`CNAME`) or repo settings without asking.
+- Pages usually redeploys within a minute. After a push, verify the change is
+  actually live at https://francesco-ai-la.github.io rather than assuming.
