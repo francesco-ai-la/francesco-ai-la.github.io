@@ -130,48 +130,83 @@ video {
 .timeline {
   list-style: none;
   padding: 0;
-  margin: 1.4rem 0 2.4rem;
+  margin: 1.6rem 0 2.6rem;
 }
 
 .timeline li {
   position: relative;
-  padding-left: 1.6rem;
-  padding-bottom: 1.3rem;
-  border-left: 1px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+  gap: 0.85rem;
+  padding-bottom: 1.5rem;
 }
 
-.timeline li:last-child {
-  border-left-color: transparent;
-  padding-bottom: 0;
-}
-
+/* the rail, drawn behind the marks */
 .timeline li::before {
   content: "";
   position: absolute;
-  left: -4px;
-  top: 0.45rem;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.35);
+  left: 15px;
+  top: 32px;
+  bottom: -4px;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.14);
 }
 
-.timeline li.current::before {
-  background-color: var(--sinatra-blue);
-  border-color: var(--sinatra-blue);
+.timeline li:last-child {
+  padding-bottom: 0;
+}
+
+.timeline li:last-child::before {
+  display: none;
+}
+
+.timeline .mark {
+  flex: 0 0 auto;
+  width: 31px;
+  height: 31px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  background-color: #555555;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline .entry {
+  display: block;
+  padding-top: 0.1rem;
 }
 
 .timeline .date {
   display: block;
-  font-size: 0.85rem;
-  opacity: 0.65;
-  line-height: 1.4;
+  font-size: 0.8rem;
+  opacity: 0.6;
+  line-height: 1.5;
+}
+
+.timeline .company {
+  display: block;
+  font-weight: 600;
 }
 
 .timeline .role {
   display: block;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  line-height: 1.45;
 }
+
+/* Brand colours for the marks */
+
+.tl-infocamere .mark { background-color: #1B4F9C; }
+.tl-nestle     .mark { background-color: #6B4F3A; }
+.tl-nike       .mark { background-color: #111111; }
+.tl-aws        .mark { background-color: #D9831F; }
+.tl-marriott   .mark { background-color: #A4343A; }
 
 /* Dividers */
 
