@@ -53,10 +53,13 @@ one from scratch — `philosophy.html` is the cleanest template.
 <link rel="stylesheet" href="style.css" />
 ```
 
-Known drift: `index.html`, `work.html`, and
-`data-ai-value-strategy-consultant.html` are missing the viewport meta and use
-the older font URL. `data-ai-value-strategy-consultant.html` is also the only
-page with a `<footer>`. Worth normalizing.
+All eight pages now use exactly this head, differing only in the title. If you
+add a page, copy it verbatim. The viewport meta is not optional: without it
+phones lay the page out at an assumed 980px and zoom out to ~38%, and the
+`max-width: 640px` media query in `style.css` never fires.
+
+Remaining drift: `data-ai-value-strategy-consultant.html` is still the only page
+with a `<footer>`. Either give every page one or drop it — ask first.
 
 ## Style
 
@@ -82,7 +85,10 @@ rhythm, or LLM filler ("delve", "it's not just X, it's Y").
 
 - Preview visually before proposing a change is done:
   `python3 -m http.server 8000` and open the page in the browser pane. Check
-  mobile width too — several pages are missing the viewport meta.
+  mobile width (375px) too.
+- Both the browser pane and GitHub Pages cache aggressively. When a change looks
+  like it did not apply, load the page with a `?fresh=1` query before concluding
+  anything is broken — this has produced two false alarms already.
 - Check every internal link still resolves after renaming or adding a page.
 - Commit in small, single-purpose changes with plain-language messages.
 - **Pushing to `main` is pre-authorized** (Francesco, 2026-08-31). Push changes
