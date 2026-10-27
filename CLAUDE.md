@@ -47,11 +47,13 @@ one from scratch — `philosophy.html` is the cleanest template.
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Page Name - Francesco Loiola</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/crimson-pro-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="style.css" />
 ```
+
+The `crossorigin` on the preload is required even though the font is
+same-origin — fonts are always fetched in CORS mode, and without it the
+browser downloads the file twice.
 
 All eight pages now use exactly this head, differing only in the title. If you
 add a page, copy it verbatim. The viewport meta is not optional: without it
@@ -60,6 +62,26 @@ phones lay the page out at an assumed 980px and zoom out to ~38%, and the
 
 Remaining drift: `data-ai-value-strategy-consultant.html` is still the only page
 with a `<footer>`. Either give every page one or drop it — ask first.
+
+## Fonts
+
+Crimson Pro is **self-hosted** in `assets/fonts/` — no Google Fonts, no external
+requests. Two `@font-face` blocks at the top of `style.css` (latin and
+latin-ext) split by `unicode-range`, so a visitor only downloads the subset
+their text needs.
+
+- It is a **variable** font: one file covers weights 200-900, declared as
+  `font-weight: 200 900`. Bold headings get a real weight, not faux bold.
+- `font-display: optional` — the browser shows the fallback serif if the font
+  is not ready almost immediately, and does **not** swap mid-page. This is
+  deliberate: it trades a rare fallback first paint for never flashing. Do not
+  change it back to `swap` without asking; the flash is what it was chosen to
+  fix.
+- Licensed SIL OFL, so self-hosting and redistribution are permitted.
+- To update the font, re-download the woff2 from the Google Fonts CSS and
+  replace the files; the `unicode-range` values must be copied across too.
+- The `←` in nav links is U+2190, outside Crimson Pro's subsets, so it has
+  always rendered in a fallback font. Not a bug.
 
 ## Style
 
