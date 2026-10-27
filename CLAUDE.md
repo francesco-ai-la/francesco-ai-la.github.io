@@ -83,6 +83,19 @@ their text needs.
 - The `←` in nav links is U+2190, outside Crimson Pro's subsets, so it has
   always rendered in a fallback font. Not a bug.
 
+## Logos
+
+`assets/logos/` holds the five company marks used by the timeline on
+`data-ai-value-strategy-consultant.html`, all rendered at 44px.
+
+- `infocamere.png` and `nestle.png` were supplied by Francesco. The Nestlé file
+  is cropped to the nest mark only — the full logo includes the wordmark, which
+  is illegible at this size.
+- `nike.svg`, `aws.svg` and `marriott.svg` come from Simple Icons (CC0),
+  single-path and recoloured to each brand's hex.
+- Adding a company means adding a mark here; keep it square-ish and legible at
+  44px, or the row looks broken next to the others.
+
 ## Style
 
 - Crimson Pro serif, black on white, links in `--sinatra-blue` (`#4A90E2`).

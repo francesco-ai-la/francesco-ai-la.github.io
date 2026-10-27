@@ -136,19 +136,19 @@ video {
 .timeline li {
   position: relative;
   display: flex;
-  gap: 0.85rem;
-  padding-bottom: 1.5rem;
+  gap: 0.9rem;
+  padding-bottom: 1.6rem;
 }
 
-/* the rail, drawn behind the marks */
+/* the rail, drawn behind the logos */
 .timeline li::before {
   content: "";
   position: absolute;
-  left: 15px;
-  top: 32px;
+  left: 21px;
+  top: 48px;
   bottom: -4px;
   width: 1px;
-  background-color: rgba(0, 0, 0, 0.14);
+  background-color: rgba(0, 0, 0, 0.13);
 }
 
 .timeline li:last-child {
@@ -161,24 +161,19 @@ video {
 
 .timeline .mark {
   flex: 0 0 auto;
-  width: 31px;
-  height: 31px;
-  border-radius: 7px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.62rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-  background-color: #555555;
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  background-color: #ffffff;
+  padding: 3px;
+  box-sizing: border-box;
   position: relative;
   z-index: 1;
 }
 
 .timeline .entry {
   display: block;
-  padding-top: 0.1rem;
+  padding-top: 0.15rem;
 }
 
 .timeline .date {
@@ -199,14 +194,6 @@ video {
   opacity: 0.8;
   line-height: 1.45;
 }
-
-/* Brand colours for the marks */
-
-.tl-infocamere .mark { background-color: #1B4F9C; }
-.tl-nestle     .mark { background-color: #6B4F3A; }
-.tl-nike       .mark { background-color: #111111; }
-.tl-aws        .mark { background-color: #D9831F; }
-.tl-marriott   .mark { background-color: #A4343A; }
 
 /* Dividers */
 
