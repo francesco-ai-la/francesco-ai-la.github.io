@@ -86,7 +86,7 @@ their text needs.
 ## Logos
 
 `assets/logos/` holds the five company marks used by the timeline on
-`data-ai-value-strategy-consultant.html`, all rendered at 44px.
+`data-ai-value-strategy-consultant.html`, all rendered at 42px.
 
 - `infocamere.png` and `nestle.png` were supplied by Francesco. The Nestlé file
   is cropped to the nest mark only — the full logo includes the wordmark, which
@@ -94,7 +94,15 @@ their text needs.
 - `nike.svg`, `aws.svg` and `marriott.svg` come from Simple Icons (CC0),
   single-path and recoloured to each brand's hex.
 - Adding a company means adding a mark here; keep it square-ish and legible at
-  44px, or the row looks broken next to the others.
+  42px, or the row looks broken next to the others.
+
+The timeline itself is **horizontal**: one flex column per engagement, with a
+1px rail running from each logo's centre to the next. Below 640px the five
+columns cannot fit, so the strip becomes a sideways-scrolling, scroll-snapping
+row rather than collapsing back to a vertical list — keep `overflow-x: auto` on
+it or the page itself starts scrolling sideways. Adding a sixth engagement
+makes the desktop columns narrower than ~110px, at which point the role labels
+start wrapping badly; shorten the labels or let it scroll on desktop too.
 
 ## Style
 
